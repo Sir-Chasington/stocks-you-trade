@@ -1,0 +1,131 @@
+
+#Calendar{
+  width:90%;
+  margin:6% auto;
+  h2{
+    color:#00B2EE;
+    font-weight:300;
+    font-size:34px;
+    margin-bottom:15px;
+  }
+  .days-of-week{
+    overflow:hidden;
+    border-bottom:1px solid #FEF6EB;
+    padding-bottom:5px;
+    li:nth-child(1){
+      margin-left:2.47%;
+    }
+    li:nth-child(7n){
+      margin-right:1.2%;
+    }
+    li:nth-child(7n-13){
+      color:#00B2EE;
+    }
+    li{
+      color:#08ffbc;
+      float:left;
+      list-style:none;
+      width:2.47%;
+      text-align:center;
+    }
+  }
+  .day-number{
+    overflow:hidden;
+    border-bottom:1px solid #FEF6EB;
+    padding:5px 0;
+    .month{
+      border-right:1px solid #FEF6EB;
+    }
+    li{
+      color:#08ffbc;
+      float:left;
+      list-style:none;
+      width:2.47%;
+      text-align:center;
+      cursor:pointer;
+    }
+    li:nth-child(n+2){
+      color:#eeb300;
+    }
+    li:first-child{
+      text-align:left;
+    }
+    li[data-start-day="sun"]{
+      &:nth-of-type(7n + 9) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="mon"]{
+      &:nth-of-type(2) {
+        margin-left:2.47%;
+      }
+      &:nth-of-type(8) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 8) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="tue"]{
+      &:nth-of-type(2) {
+        margin-left:4.94%;
+      }
+      &:nth-of-type(7) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 14) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="wed"]{
+      &:nth-of-type(2) {
+        margin-left:7.41%;
+      }
+      &:nth-of-type(6) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 13) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="thu"]{
+      &:nth-of-type(2) {
+        margin-left:9.88%;
+      }
+      &:nth-of-type(5) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 12) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="fri"]{
+      &:nth-of-type(2) {
+        margin-left:12.35%;
+      }
+      &:nth-of-type(4) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 11) {
+        margin-left:1.2%;
+      }
+    }
+    li[data-start-day="sat"]{
+      &:nth-of-type(2) {
+        margin-left:14.82%;
+      }
+      &:nth-of-type(3) {
+        margin-left:1.2%;
+      }
+      &:nth-of-type(7n + 10) {
+        margin-left:1.2%;
+      }
+    }
+    li.current-day{
+      color:#ee00b2;
+    }
+    li.entry-day{
+      color:#3cceff;
+    }
+  }
+}

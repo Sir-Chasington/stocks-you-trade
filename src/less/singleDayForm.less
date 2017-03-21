@@ -1,0 +1,242 @@
+@dayInput:#3cceff;
+.single-day-view{
+  overflow:hidden;
+  position:relative;
+  .back-to-main{
+    color:#ee00b2;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    left: 62px;
+    cursor: pointer;
+    i{
+      font-size: 20px;
+      padding-right:4px;
+    }
+  }
+  .single-day-aside{
+    float:left;
+    width:45%;
+  }
+  .single-day-aside.two{
+    width:40%;
+    .history-single-day{
+      padding:0 20px 20px;
+      font-weight:100;
+      font-size:12px;
+      .title{
+        color:#08ffbc;
+        &:nth-child(n+2){
+          padding-left:4px;
+        }
+      }
+      .title-info{
+        color:#eeb300;
+        padding-right:8px;
+      }
+    }
+  }
+  .history{
+    font-weight:100;
+    font-size:20px;
+    margin: -25px 0 20px 20px;
+    color:#00b2ee;
+  }
+  form{
+    margin:0 0 0 8%;
+    .bought-sold{
+      overflow:hidden;
+      height:24px;
+      .radio-inputs{
+        float: left;
+        padding:3px 0;
+        .sold-right{
+          border-right: 1px solid #FEF6EB;
+        }
+      }
+      .radio-inputs:nth-child(-n+2){
+        margin-right:3%;
+      }
+    }
+    input[type="text"]{
+      color:#00b2ee;
+    }
+    .day-info.ticker{
+      input{
+        text-transform:uppercase;
+      }
+      ::-webkit-input-placeholder {
+         text-transform:lowercase;
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+         text-transform:lowercase;
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+         text-transform:lowercase;
+      }
+
+      :-ms-input-placeholder {
+         text-transform:lowercase;
+      }
+      .tick-error{
+        color:#ff084b;
+      }
+    }
+    .success-message{
+      color: #00b2ee;
+      float: right;
+      padding: 10px 30px;
+    }
+    .error-shares{
+      color: #ee003b;
+      float: left;
+      padding: 10px 0;
+    }
+    button{
+      padding: 10px 32px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #00b2ee;
+      float:right;
+      cursor: pointer;
+    }
+    .field-error{
+      text-align: right;
+      padding-right: 20px;
+      padding-top: 10px;
+      overflow: hidden;
+      color:#ff084b;
+    }
+  }
+  .day-info{
+    margin:6% 0 6% 0;
+    span{
+      color:#eeb300;
+      &.field-error-spot{
+        color:#ff084b;
+        border-color:#ff084b;
+        &:after{
+          color:#ff084b;
+          border-color:#ff084b;
+        }
+      }
+    }
+    input{
+      background:transparent;
+      border-right:none;
+      border-left:none;
+      border-top:none;
+      border-bottom:1px solid #FEF6EB;
+      border-radius:4px;
+      margin-left:2%;
+      padding-left:1%;
+      width:30%;
+      &.field-error-spot{
+        color:#ff084b;
+        border-color:#ff084b;
+      }
+    }
+    ::-webkit-input-placeholder {
+       color:@dayInput;
+       font-weight:100;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color:@dayInput;
+       font-weight:100;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color:@dayInput;
+       font-weight:100;
+    }
+
+    :-ms-input-placeholder {
+       color:@dayInput;
+       font-weight:100;
+    }
+    .stock-price-error{
+      color:#ff084b;
+    }
+    .position-size-error{
+      color:#ff084b;
+    }
+    .broker-fee-error{
+      color:#ff084b;
+    }
+  }
+  .notes-section{
+    margin-bottom:3%;
+    div{
+      color:#eeb300;
+    }
+    textarea{
+      border-radius:3px;
+      background-color: rgba(255,255,255,0.1);
+      border:none;
+      color:@dayInput;
+      padding:1%;
+      box-sizing:border-box;
+      width:100%;
+    }
+  }
+  .radio{
+    color:#00b2ee;
+    font-size:15px;
+    position:relative;
+  }
+  .radio span{
+    position:relative;
+    padding:3px 30px;
+  }
+  .radio span:after{
+    content:'';
+    width:20px;
+    height:20px;
+    border:2px solid;
+    position:absolute;
+    left:0;
+    top:1px;
+    border-radius:100%;
+    -ms-border-radius:100%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+    box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    color:#00b2ee;
+  }
+  .radio span.inactive:after{
+    color:#99e0f8;
+  }
+  .radio input[type="radio"]{
+     cursor: pointer;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+  }
+  .radio input[type="radio"]:checked + span{
+    color:#08ffbc;
+  }
+  .radio input[type="radio"]:checked + span:before{
+      content:'';
+    width:10px;
+    height:10px;
+    position:absolute;
+    background:#08ffbc;
+    left:5px;
+    top:6px;
+    border-radius:100%;
+    -ms-border-radius:100%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+  }
+}

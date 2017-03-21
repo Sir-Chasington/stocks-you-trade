@@ -1,0 +1,151 @@
+@stock-info: #00b2ee;
+@stock-placeholder:#3cceff;
+@up:#08ffbc;
+@down:#ff084b;
+
+.account-info{
+  margin:20px 0 0 44px;
+  overflow:hidden;
+  .error-port-update{
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    color: @down;
+  }
+  .portfolio{
+    float:left;
+    overflow:hidden;
+    i{
+      color:#eeb300;
+      float:left;
+      &:before{
+        font-size:70px;
+      }
+    }
+    .balance{
+      float:left;
+      font-size:50px;
+      padding:16px 0 0 14px;
+      font-weight:100;
+      color:@stock-info;
+    }
+    span{
+      float:left;
+    }
+    form{
+      float:left;
+      input{
+        background: transparent;
+        border: none;
+        font-size:50px;
+        font-weight:100;
+        color:@stock-placeholder;
+        width:180px;
+      }
+    }
+  }
+  .percent-info{
+    float:left;
+    padding-top: 40px;
+    padding-left:20px;
+    i{
+      float:left;
+      &:before{
+        font-size:20px;
+      }
+    }
+    .gain-loss{
+      float: left;
+      font-size: 20px;
+      padding-top: 4px;
+      padding-left: 6px;
+      font-weight: 100;
+    }
+    .gain-loss-form{
+      float:left;
+      input{
+        float: left;
+        font-size: 20px;
+        font-weight: 100;
+        background: transparent;
+        border: none;
+        padding-top:4px;
+        padding-left:6px;
+        width:50px;
+      }
+      input.up{
+        color:@up;
+      }
+      input.down{
+        color:@down;
+      }
+    }
+  }
+  .percent-info.up{
+    color:@up;
+  }
+  .percent-info.down{
+    color:@down;
+  }
+  .win-info{
+    float:left;
+    padding-top:44px;
+    font-size:20px;
+    color:#00b2ee;
+    padding-left:35px;
+    .win-form{
+      overflow:hidden;
+      span{
+        float:left;
+      }
+      form{
+        float:left;
+        input{
+          background: transparent;
+          border: none;
+          padding-left:4px;
+          width:28px;
+          color:@stock-placeholder;
+        }
+      }
+    }
+  }
+  .lose-info{
+    float:left;
+    padding-top:44px;
+    font-size:20px;
+    color:#00b2ee;
+    padding-left:35px;
+    .lose-form{
+      overflow:hidden;
+      span{
+        float:left;
+      }
+      form{
+        float:left;
+        input{
+          background: transparent;
+          border: none;
+          padding-left:4px;
+          width:28px;
+          color:@stock-placeholder;
+        }
+      }
+    }
+  }
+  ::-webkit-input-placeholder {
+     color:@stock-placeholder;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     color:@stock-placeholder;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color:@stock-placeholder;
+  }
+
+  :-ms-input-placeholder {
+     color:@stock-placeholder;
+  }
+}
