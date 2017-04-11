@@ -61,7 +61,7 @@ let stockData = assign({}, EventEmitter.prototype, {
   },
 
   getUpdatedData: function(){
-    let url = '../../testJSON/test.json'
+    let url = '../../testJSON/test.json';
     let user = 'connor';
     return jQuery.ajax({
       url: url,
